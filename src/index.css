@@ -1,12 +1,74 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+  --main-header-color: darkgray;
+  --nav-background-color: white;
+  --main-background-color: lightblue;
+  --main-nav-text-color: black;
+  --main-outline-color: red;
+  --main-rack-color: darkgray;
+  --main-aisle-color: red;
+  --main-office-color: black;
+  --main-open-area: gray;
+  --main-dock: blue;
+}
+h1 {
+  padding-top: 0px;
+  padding-bottom: 40px;
+}
+h2 {
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: var(--main-background-color);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* --------------- Computer View --------------- */
+@media screen and (min-width: 900px) {
+  body {
+      font-size: 14px;
+  }
+
+  h1 {
+      font-size: 45px;
+      padding-bottom: 20px;
+  }
+  main {
+      padding: 15px;
+  }
+
+
+}
+
+/* --------------- Mobile View (Phones) --------------- */
+@media (max-width: 899px) {
+  h1 {
+      font-size: 50px;
+  }
+  main {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      margin-top: 50px;
+  }
+  body {
+      font-size: 14px;
+      text-align: center;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

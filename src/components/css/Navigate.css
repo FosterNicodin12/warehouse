@@ -1,0 +1,63 @@
+#main-nav {
+    display: flex;
+}
+
+#main-nav li{
+    list-style-type: none;
+    padding: 5px;
+    flex:1;
+}
+
+#main-nav li a{
+    text-decoration: none;
+}
+
+#main-nav, .menu {
+    background-color: var(--nav-background-color);
+    width: 100%;
+}
+
+#main-nav ul, .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#main-nav ul li, .menu ul li {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid var(--main-nav-text-color);
+}
+
+#main-nav a, .menu a {
+    margin-top: 7px;
+    text-decoration: none;
+    color: var(--main-nav-text-color);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+@media (max-width: 899px) {
+    #main-nav {
+        display: none;
+    }
+    #main-nav ul, .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #main-nav ul li, .menu ul {
+        width: 100%;
+        padding: 10px 0;
+    }
+    #clalogo {
+        max-width: 110px;
+    }
+}
