@@ -8,7 +8,7 @@ function Navigate() {
             <ul>
                 <li><Link to = "/"> Home </Link></li>
                 <li><Link to = "/About"> About Us</Link></li>
-                <li><Link to = "/services"> Services </Link></li>
+                <li><Link to = "/Services"> Services </Link></li>
                 <li><Link to = "/trucking"> Trucking </Link></li>
                 <li><Link to = "/currentinventory"> Current Inventory </Link></li>
             </ul>

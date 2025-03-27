@@ -1,0 +1,84 @@
+/* services.module.css */
+
+/* Global Styles (if needed, otherwise import from a global CSS file) */
+body {
+    font-family: sans-serif; /* Or your preferred font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue; /* Or your preferred background */
+    color: #333;
+  }
+  
+  /* Box Around Sections */
+  .boxaround {
+    border: 2px solid black; /* Or your preferred border color */
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white; /* Or your preferred background */
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  /* Main Section */
+  main {
+    padding: 30px;
+    align-items: center;
+  }
+  
+  main p {
+    text-align: center;
+  }
+  
+  /* Service Selection Section */
+  #topimages,
+  #bottomimages {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+  }
+  
+  #bottomimages {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #service img {
+    max-width: 100%; /* Make images responsive */
+    height: auto;
+  }
+  
+  #topimages h3,
+  #bottomimages h3 {
+    background-color: darkgray; /* Or your preferred header color */
+    width: 200px;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 899px) {
+    #topimages,
+    #bottomimages {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    #bottomimages {
+      width: 100%;
+    }
+  
+    #service img {
+      max-width: 80%; /* Adjust image size on smaller screens */
+    }
+  }
