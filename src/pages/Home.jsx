@@ -1,21 +1,16 @@
-import Tree from '../components/Tree';
 import './css/Home.css';
 function App() {
   return (
     <>
-    <section className = "columns">
-      <Tree
-      name="Live Oak"
-      description="Doesn't lose it's leaves."
-      image="images/live-oak.jpg"
-      />
-      <Tree
-      name="Dogwood"
-      description="Flowers in spring"
-      image="images/dogwood.jpeg"
-      />
-
-    </section>
+        <main className="boxaround">
+            <img id="bottomimage" src="images/mainimage.png" alt="Charleston, SC Warehouse" />
+            <p>Charleston, SC Warehouse</p>
+            <p>
+                We are here for all your warehousing and trucking needs. We have 12 docks along with space for 
+                flatbeds to back into the warehouse for loading. There is also an onsite 2-acre drop lot, if the 
+                containers do not need to be immediately unloaded, or for trips through the port.
+            </p>
+        </main>
     </>
   );
 }

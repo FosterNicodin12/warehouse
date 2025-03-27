@@ -1,0 +1,51 @@
+main {
+    padding: 30px;
+    align-items: center;
+}
+
+.boxaround {
+    border: 2px solid var(--main-nav-text-color);
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--nav-background-color);
+    width: 80%;
+    margin: 20px auto;
+}
+
+#bottomimage {
+    display: block;
+    margin: 25px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+main p:first-of-type {
+    margin-bottom: 50px;
+}
+
+main p:last-of-type {
+    margin-top: 50px;
+}
+p {
+    text-align: center;
+}
+@media (max-width: 899px) {
+    #main-nav {
+        display: none;
+    }
+
+    #topscreen {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #bottomimage {
+        max-width: 300px;
+        height: auto;
+    }
+}
