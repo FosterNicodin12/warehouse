@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/warehouse/static/css/main.83814c1f.css",
+    "main.js": "/warehouse/static/js/main.8b14dacb.js",
+    "index.html": "/warehouse/index.html",
+    "main.83814c1f.css.map": "/warehouse/static/css/main.83814c1f.css.map",
+    "main.8b14dacb.js.map": "/warehouse/static/js/main.8b14dacb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83814c1f.css",
+    "static/js/main.8b14dacb.js"
+  ]
+}
