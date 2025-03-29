@@ -24,7 +24,7 @@ function Services() {
                     </div>
                     <div id="service" className="one">
                         <Link to = "/unload"><img src="images/unloadservice.jpg" alt="Unload and Palletize" /></Link>
-                        <Link to="/unload">Unload and Palletize</Link>
+                        <h3>Unload and Palletize</h3>
                     </div>
                     <div id="service" className="one">
                         <Link to="/transload"><img src="images/transloadservice.png" alt="Transload" /></Link>
