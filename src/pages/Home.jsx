@@ -3,8 +3,7 @@ function App() {
   return (
     <>
         <main className="boxaround">
-            <img id="bottomimage" src="images/mainimage.png" alt="Charleston, SC Warehouse" />
-            <img src="images/mainimage.png" alt="Long-Term Storage" />
+            <img id="bottomimage" src={`${process.env.PUBLIC_URL}/images/mainimage.png`} alt="Charleston, SC Warehouse" />
             <p>Charleston, SC Warehouse</p>
             <p>
                 We are here for all your warehousing and trucking needs. We have 12 docks along with space for 
