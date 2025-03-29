@@ -1,11 +1,39 @@
+/* Header.css */
+
 header {
     width: 100%;
     background-color: var(--main-header-color);
     color: var(--main-background-color);
     text-align: center;
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: 45px;
     padding-bottom: 20px;
-}
+  }
+  
+  #topscreen {
+    display: flex;
+    justify-content: space-between; /* This is the key change */
+    align-items: center; /* Vertically align items */
+    padding: 10px;
+  }
+  
+  #clalogo {
+    order: 2; /* Move the logo to the right */
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  #user {
+    order: 1; /* Keep user on the left */
+  }
+  
+  figure {
+    margin: 0; /* Remove default figure margin */
+  }
+  
+  figcaption {
+    font-size: 6px;
+    text-align: right; /* Align figcaption right */
+  }

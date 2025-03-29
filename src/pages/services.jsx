@@ -32,11 +32,11 @@ function Services() {
                 </section>
                 <section id="bottomimages">
                     <div id="service" className="one">
-                        <a href="crossdocking.html"><img src="images/crossdockingservice.png" alt="Cross Docking" /></a>
+                        <a href="crossdock"><img src="images/crossdockingservice.png" alt="Cross Docking" /></a>
                         <h3>Cross Docking</h3>
                     </div>
                     <div id="service" className="one">
-                        <a href="localdray.html"><img src="images/localservice.jpg" alt="Local Dray" /></a>
+                        <a href="localdray"><img src="images/localservice.jpg" alt="Local Dray" /></a>
                         <h3>Local Dray</h3>
                     </div>
                 </section>

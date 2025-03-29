@@ -5,7 +5,10 @@ import './index.css';
 import Layout from './Layout';
 import About from './pages/About';
 import Blog from './pages/Blog';
+import CrossDock from './pages/crossdocking';
+import CurrentInventory from './pages/currentinventory';
 import Home from './pages/Home';
+import LocalDray from './pages/localdray';
 import Nopage from './pages/Nopage';
 import Rates from './pages/rates';
 import Services from './pages/services';
@@ -26,7 +29,9 @@ function App() {
           <Route path="transload" element={<Transload />}/>
           <Route path="unload" element={<Unload />}/>
           <Route path="rates" element={<Rates />}/>
-
+          <Route path="crossdock" element={<CrossDock />}/>
+          <Route path="localdray" element={<LocalDray />}/>
+          <Route path="currentinventory" element={<CurrentInventory />}/>
           <Route path="blog" element={<Blog />} />
           <Route path="*" element={<Nopage/>} />
         </Route>
