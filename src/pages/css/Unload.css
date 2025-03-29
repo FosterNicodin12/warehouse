@@ -1,0 +1,87 @@
+/* Unload.css */
+
+/* Boxaround */
+.boxaround {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  /* Autopbox */
+  #autopbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #autopbox img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  #autext {
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  #autext h2 {
+    margin-bottom: 10px;
+  }
+  
+  #autext p {
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Ratecalc Section */
+  #headerratecalc {
+    text-align: center;
+  }
+  
+  #headerratecalc h2 {
+    padding-bottom: 40px;
+  }
+  
+  #ratecalc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rate {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  .rate label {
+    margin-bottom: 5px;
+  }
+  
+  .rate input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (min-width: 768px) {
+    #autopbox {
+      flex-direction: row;
+    }
+  
+    #autext {
+      text-align: left;
+      padding: 0;
+    }
+  
+    #ratecalc {
+      flex-wrap: nowrap;
+    }
+  }

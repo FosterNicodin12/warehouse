@@ -18,15 +18,15 @@ function Services() {
                 <h2>Select the service you are interested in to learn more about it</h2>
                 <section id="topimages">
                     <div id="service" className="one">
-                        <a href="rates.html"><img src="images/longtermservice.png" alt="Long-Term Storage" /></a>
+                        <a href="/rates"><img src="images/longtermservice.png" alt="Long-Term Storage" /></a>
                         <h3>Long-Term Storage</h3>
                     </div>
                     <div id="service" className="one">
-                        <a href="unload.html"><img src="images/unloadservice.jpg" alt="Unload and Palletize" /></a>
+                        <a href="unload"><img src="images/unloadservice.jpg" alt="Unload and Palletize" /></a>
                         <h3>Unload and Palletize</h3>
                     </div>
                     <div id="service" className="one">
-                        <a href="transload.html"><img src="images/transloadservice.png" alt="Transload" /></a>
+                        <a href="transload"><img src="images/transloadservice.png" alt="Transload" /></a>
                         <h3>Transload</h3>
                     </div>
                 </section>

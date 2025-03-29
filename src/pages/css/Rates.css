@@ -1,0 +1,90 @@
+/* Autopbox */
+
+/* Ratecalc Section */
+#headerratecalc {
+    text-align: center;
+}
+#rateimg {
+    margin-top: 110px;
+}
+#headerratecalc h2 {
+    padding-bottom: 40px;
+}
+
+#ratecalc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.rate {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px; /* Reduced margin */
+    margin-right: 10px; /* Reduced margin */
+    margin-bottom: 15px; /* Reduced margin */
+    flex: 1; /* Distribute space evenly */
+    min-width: 180px; /* Reduced minimum width */
+}
+
+.rate label {
+    margin-bottom: 3px; /* Reduced margin */
+}
+
+.rate input[type="text"] {
+    padding: 6px; /* Reduced padding */
+    margin-top: 3px; /* Reduced margin */
+    width: 80%; /* Reduced width */
+    box-sizing: border-box;
+    align-self: center; /* Center the textbox */
+}
+
+/* --------------- Computer View --------------- */
+@media screen and (min-width: 900px) {
+    #autopbox img {
+        margin-left: 50px;
+    }
+
+    #autext {
+        margin-left: 150px;
+        margin-right: 50px;
+    }
+
+    #ratecalc {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    }
+
+    .rate {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* --------------- Mobile View (Phones) --------------- */
+@media (max-width: 899px) {
+    #autopbox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #autext {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #ratecalc {
+        flex-direction: column; /* Stack rate divs vertically */
+    }
+
+    .rate {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; /* Full width on mobile */
+    }
+
+    .rate input[type="text"] {
+        width: 100%; /* Full width on mobile */
+    }
+}

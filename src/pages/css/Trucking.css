@@ -1,0 +1,121 @@
+/* Trucking.css */
+
+/* Boxaround */
+.boxaround {
+    border: 2px solid black; /* Or your preferred border color */
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white; /* Or your preferred background color */
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  /* Autopbox */
+  #autopbox {
+    display: flex;
+    flex-direction: column; /* Stack image and text on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  #autopbox img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Space between image and text */
+  }
+  
+  #autext {
+    text-align: center;
+    padding: 0 20px; /* Add padding for smaller screens */
+  }
+  
+  #autext h2 {
+    margin-bottom: 10px;
+  }
+  
+  #autext p {
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Join Section */
+  #join {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  #hireform {
+    margin-top: 25px;
+    max-width: 600px;
+    margin: 25px auto; /* Center the form */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column; /* Stack label and input on smaller screens */
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #bottomform {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #submitbtn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Or your preferred button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  #result {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Responsive Adjustments */
+  @media (min-width: 768px) {
+    #autopbox {
+      flex-direction: row; /* Image and text side-by-side on larger screens */
+    }
+  
+    #autext {
+      text-align: left;
+      padding: 0;
+    }
+  
+    .form-group {
+      flex-direction: row; /* Label and input side-by-side */
+      align-items: center;
+    }
+  
+    .form-group label {
+      width: 20%;
+      text-align: right;
+      margin-right: 10px;
+    }
+  
+    .form-group input {
+      width: 80%;
+    }
+  
+    #submitbtn {
+        width: auto; /* button resizes based on content */
+    }
+  }
