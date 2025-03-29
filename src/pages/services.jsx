@@ -1,4 +1,5 @@
-import './css/Services.css'; // Import your Services.css file
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import './css/Services.css';
 
 function Services() {
     return (
@@ -18,25 +19,25 @@ function Services() {
                 <h2>Select the service you are interested in to learn more about it</h2>
                 <section id="topimages">
                     <div id="service" className="one">
-                        <a href="/rates"><img src="images/longtermservice.png" alt="Long-Term Storage" /></a>
+                        <Link to="warehouse/rates"><img src="images/longtermservice.png" alt="Long-Term Storage" /></Link>
                         <h3>Long-Term Storage</h3>
                     </div>
                     <div id="service" className="one">
-                        <a href="unload"><img src="images/unloadservice.jpg" alt="Unload and Palletize" /></a>
-                        <h3>Unload and Palletize</h3>
+                        <Link to = "/unload"><img src="images/unloadservice.jpg" alt="Unload and Palletize" /></Link>
+                        <Link to="/unload">Unload and Palletize</Link>
                     </div>
                     <div id="service" className="one">
-                        <a href="transload"><img src="images/transloadservice.png" alt="Transload" /></a>
+                        <Link to="/transload"><img src="images/transloadservice.png" alt="Transload" /></Link>
                         <h3>Transload</h3>
                     </div>
                 </section>
                 <section id="bottomimages">
                     <div id="service" className="one">
-                        <a href="crossdock"><img src="images/crossdockingservice.png" alt="Cross Docking" /></a>
+                        <Link to="/crossdock"><img src="images/crossdockingservice.png" alt="Cross Docking" /></Link>
                         <h3>Cross Docking</h3>
                     </div>
                     <div id="service" className="one">
-                        <a href="localdray"><img src="images/localservice.jpg" alt="Local Dray" /></a>
+                        <Link to="/localdray"><img src="images/localservice.jpg" alt="Local Dray" /></Link>
                         <h3>Local Dray</h3>
                     </div>
                 </section>
