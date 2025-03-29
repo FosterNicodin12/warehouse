@@ -2,7 +2,7 @@
   "name": "warehouse/my-app",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://fosternicodin12.github.io/warehouse",
+  "homepage": "warehouse",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
