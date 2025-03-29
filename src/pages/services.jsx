@@ -19,7 +19,7 @@ function Services() {
                 <h2>Select the service you are interested in to learn more about it</h2>
                 <section id="topimages">
                     <div id="service" className="one">
-                        <Link to="warehouse/rates"><img src="images/longtermservice.png" alt="Long-Term Storage" /></Link>
+                        <Link to="/rates"><img src="images/longtermservice.png" alt="Long-Term Storage" /></Link>
                         <h3>Long-Term Storage</h3>
                     </div>
                     <div id="service" className="one">
