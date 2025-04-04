@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/Employee.css';
 
-function Employee({ name, role, description, imageUrl }) {
+function Employee({ name, description, imageUrl }) {
   return (
     <section className="employee boxaround">
       <img className="employeeimg" src={imageUrl} alt={name} />

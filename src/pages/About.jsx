@@ -49,7 +49,7 @@ function About() {
             <Employee
                 name="Holloway"
                 description="Bryce Holloway is a skilled Forklift Operator with 12 years of experience, known for his precision and efficiency in handling warehouse inventory. He expertly navigates tight spaces and ensures that products are safely loaded, unloaded, and stored. With a strong focus on safety, Bryce follows all protocols to prevent accidents and keep operations running smoothly. His reliability and work ethic make him a key player in the warehouse team. Bryce takes great pride in his ability to move heavy shipments quickly and safely, ensuring the warehouse operates efficiently. Over his 12-year career, he has developed a keen eye for spotting potential hazards and preventing accidents before they happen. His coworkers appreciate his reliability and willingness to help, whether it’s assisting with loading trucks or maintaining equipment. Bryce’s dedication to his craft makes him an essential part of the warehouse team, keeping operations smooth and on schedule."
-                imageUrl="/images/employee4.jpg"
+                imageUrl="images/employee4.jpg"
             />
 
             <section id="aubottombox" className="boxaround">

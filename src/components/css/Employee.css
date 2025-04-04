@@ -15,7 +15,7 @@
 
 .employeeimg {
     width: 200px;
-    height: 20px;
+    height: auto;
 }
 
 @media screen and (max-width: 899px) {
