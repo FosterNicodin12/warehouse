@@ -1,0 +1,31 @@
+/* Employee Sections */
+.employee {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.employeediv {
+    flex: 1;
+}
+
+.employee h2 {
+    margin-bottom: 10px;
+}
+
+.employeeimg {
+    width: 200px;
+    height: 20px;
+}
+
+@media screen and (max-width: 899px) {
+
+.employee {
+    flex-direction: column;
+    text-align: center;
+}
+
+.employeediv {
+    margin: 0;
+}
+}

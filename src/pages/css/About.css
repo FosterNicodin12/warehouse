@@ -24,11 +24,6 @@ img {
     height: auto;
 }
 
-.employeeimg {
-    width: 200px;
-    height: auto;
-}
-
 /* Autopbox (Top Section) */
 #autopbox {
     display: flex;
@@ -58,21 +53,6 @@ img {
 
 #autext p {
     margin-top: 10px;
-}
-
-/* Employee Sections */
-.employee {
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
-}
-
-.employeediv {
-    flex: 1;
-}
-
-.employee h2 {
-    margin-bottom: 10px;
 }
 
 /* Bottom Box (Contact Information) */
@@ -125,18 +105,6 @@ img {
     height: 500px;
 }
 
-/* Header */
-header {
-    width: 100%;
-    background-color: var(--main-header-color);
-    color: var(--main-background-color);
-    text-align: center;
-}
-
-h1 {
-    padding-bottom: 40px;
-}
-
 /* Responsive Design */
 @media screen and (max-width: 899px) {
     main {
@@ -156,15 +124,6 @@ h1 {
     
     #aubottombox {
         padding: 40px;
-    }
-
-    .employee {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .employeediv {
-        margin: 0;
     }
 
     #contacttext {

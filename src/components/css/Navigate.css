@@ -48,7 +48,14 @@
     padding: 10px;
     width: 100%;
   }
-  
+  @media (max-width: 899px) {
+    #main-nav button {
+      display:none;
+    }
+    #main-nav .hide-small {
+      display:flex;
+    }
+  }
   @media (max-width: 899px) {
     #main-nav {
       display: none;
