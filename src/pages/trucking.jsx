@@ -2,6 +2,35 @@ import React from 'react';
 import './css/Trucking.css'; // Import your Trucking.css file
 
 function Trucking() {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE"); // Replace with your actual access key
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.error("Error submitting form:", data);
+        setResult(data.message || "An error occurred during submission.");
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+      setResult("Failed to send form. Please try again later.");
+    }
+  };
+
   return (
     <main>
       <section id="autopbox" className="boxaround">
@@ -27,7 +56,7 @@ function Trucking() {
       <section id="join" className="boxaround">
         <h2>Please provide your information if you are interested in joining and meet our requirements</h2>
         <div>
-          <form method="POST" id="form" className="form-container">
+          <form method="POST" id="form" className="form-container" onSubmit={onSubmit}>
             <input type="hidden" name="access_key" value="9aa849df-2454-48d2-b4d9-9f69c525c85e" />
             <div className="form-group">
               <label htmlFor="fname">First Name:</label>
@@ -57,7 +86,7 @@ function Trucking() {
               <button id="submitbtn" type="submit">
                 Submit Form
               </button>
-              <div id="result"></div>
+              <div id="result">{result}</div>
             </div>
           </form>
         </div>
