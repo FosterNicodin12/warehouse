@@ -30,9 +30,6 @@ p {
     text-align: center;
 }
 @media (max-width: 899px) {
-    #main-nav {
-        display: none;
-    }
 
     #topscreen {
         flex-direction: column;

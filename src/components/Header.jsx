@@ -7,7 +7,7 @@ function Header() {
             <div id="topscreen">
                 <figure>
                     <img id="clalogo" src="images/cla.png" alt="CLA logo"/>
-                    <figcaption>Image source: <a href="https://www.coscologam.com/">Ehttps://www.coscologam.com/</a></figcaption>
+                    <figcaption>Image source: <a href="https://www.coscologam.com/">https://www.coscologam.com/</a></figcaption>
                 </figure>
                 <h3 id="user">nnicodin</h3>
             </div>
