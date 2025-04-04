@@ -29,4 +29,9 @@
 .employeediv {
     margin: 0;
 }
+.employeeimg {
+    padding-left: 120px;
+    width: 200px;
+    height: 100px;
+}
 }
