@@ -1,0 +1,79 @@
+/* RateCalculator.css */
+
+/* Boxaround (applied to the main section) */
+.boxaround {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center; /* Center the main heading */
+}
+
+/* Header for the rate calculator */
+#headerratecalc h2 {
+    padding-bottom: 40px;
+    margin-top: 0; /* Reset default h2 margin */
+}
+
+/* Container for the individual rate options */
+#ratecalc {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add some padding around the options */
+}
+
+/* Individual rate option container */
+.rate {
+    display: flex;
+    flex-direction: column;
+    margin: 15px; /* Add spacing between rate options */
+    width: calc(33% - 30px); /* Roughly one-third width with margin for spacing */
+    min-width: 200px; /* Ensure a minimum width for readability */
+    text-align: left; /* Align label and input text to the left within each option */
+}
+
+.rate label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.rate input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.rate input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Spacing for the final paragraph elements */
+#headerratecalc p {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #ratecalc {
+        flex-direction: column; /* Stack rate options vertically on smaller screens */
+        align-items: stretch; /* Make items take full width */
+    }
+
+    .rate {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .rate {
+        width: calc(50% - 30px); /* Two columns on medium screens */
+    }
+}
