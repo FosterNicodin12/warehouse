@@ -1,9 +1,30 @@
-import React from 'react';
-//import {useState} from "react";
-//import axios from 'axios';
-import './css/CurrentInventory.css';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import './css/CurrentInventory.css'; // Import your CSS file
 
 function CurrentInventory() {
+  const [inventoryData, setInventoryData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchInventory = async () => {
+      try {
+        const response = await axios.get(
+          'https://warehouse-server-6vh1.onrender.com/api/bays' // Replace with your Render server URL
+        );
+        setInventoryData(response.data[0]); // Assuming your server sends back an array containing one array of bays
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+        console.error("Error fetching inventory:", error);
+      }
+    };
+
+    fetchInventory();
+  }, []);
+
   return (
     <main>
       <p className="boxaround">
@@ -11,158 +32,15 @@ function CurrentInventory() {
         The red represents the aisles and the blue represents our loading docks.
       </p>
       <div className="warehouse">
-        <div className="open section">Pallets</div>
-        <div className="rack section">
-          <p>A1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>B1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>C1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>D1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>E1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>F1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>G1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>H1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>I1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>J1<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>K1<br />ID:</p>
-        </div>
-
-        <div className="open section">Open</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-
-        <div className="dock section">Dock 3</div>
-        <div className="aisle section">Aisle</div>
-        <div className="rack section">
-          <p>B2<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>C2<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>D2<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>E2<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>F2<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>G2<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>H2<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>I2<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>J2<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>K2<br />ID:</p>
-        </div>
-
-        <div className="dock section">Dock 3</div>
-        <div className="aisle section">Aisle</div>
-        <div className="rack section">
-          <p>B3<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>C3<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>D3<br />ID:</p>
-          3
-        </div>
-        <div className="rack section">
-          <p>E3<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>F3<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>G3<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>H3<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>I3<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>J3<br />ID:</p>
-        </div>
-        <div className="rack section">
-          <p>K3<br />ID: TEST-1342-9</p>
-        </div>
-
-        <div className="dock section">Dock 1</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-        <div className="aisle section">Aisle</div>
-
-        <div className="open section">Open</div>
-        <div className="open section">Open</div>
-        <div className="open section">Open</div>
-        <div className="open section">Open</div>
-        <div className="open section">Open</div>
-        <div className="office section">Office</div>
-        <div className="office section">Office</div>
-        <div className="rack section">
-          <p>G4<br />ID: MTSU-4124-1</p>
-        </div>
-        <div className="rack section">
-          <p>H4<br />ID: MTSU-8704-6</p>
-        </div>
-        <div className="rack section">
-          <p>I4<br />ID: XMRU-1234-6</p>
-        </div>
-        <div className="rack section">
-          <p>J4<br />ID: TEST-1342-9</p>
-        </div>
-        <div className="rack section">
-          <p>K4<br />ID:</p>
-        </div>
+        {inventoryData.map(bay => (
+          <div key={bay.bay_number} className={`section ${bay.contents}`}>
+            <h3>{bay.bay_number}</h3>
+            {bay.container_number && <p>ID: {bay.container_number}</p>}
+            {!bay.container_number && bay.contents === 'rack' && <p>ID:</p>}
+            {bay.company && <p className="company-name">Company: {bay.company}</p>}
+          </div>
+        ))}
       </div>
-      <script src="script.js"></script>
     </main>
   );
 }
