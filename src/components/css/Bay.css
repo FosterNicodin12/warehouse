@@ -1,0 +1,56 @@
+/* src/components/Bay.css */
+
+.bay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 80px; /* Or adjust as needed */
+    min-height: 60px; /* Or adjust as needed */
+  }
+  
+  .bay p {
+    white-space: normal;
+    word-wrap: break-word;
+    margin-top: 2px;
+    font-size: inherit; /* Inherit font size from .bay */
+  }
+  
+  .bay.rack {
+    background-color: darkgray;
+    color: white; /* Added color for better visibility on darkgray */
+  }
+  
+  .bay.aisle {
+    background-color: red;
+    color: white;
+  }
+  
+  .bay.dock {
+    background-color: blue;
+    color: white;
+  }
+  
+  .bay.office {
+    background-color: black;
+    color: white;
+  }
+  
+  .bay.open {
+    background-color: gray;
+    color: white;
+  }
+  
+  .bay .company-name {
+    margin-top: auto; /* Push to the bottom in flex container */
+    font-size: 0.8em;
+    color: #ddd; /* Lighter color for company name on dark backgrounds */
+  }

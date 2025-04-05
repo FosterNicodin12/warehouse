@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import './css/CurrentInventory.css'; // Import your CSS file
+import Bay from '../components/Bay'; // Import the Bay component
+import './css/CurrentInventory.css'; // Import your CSS file for the overall page
 
 function CurrentInventory() {
   const [inventoryData, setInventoryData] = useState([]);
@@ -33,12 +34,14 @@ function CurrentInventory() {
       </p>
       <div className="warehouse">
         {inventoryData.map(bay => (
-          <div key={bay.bay_number} className={`section ${bay.contents}`}>
-            <h3>{bay.bay_number}</h3>
-            {bay.container_number && <p>ID: {bay.container_number}</p>}
-            {!bay.container_number && bay.contents === 'rack' && <p>ID:</p>}
-            {bay.company && <p className="company-name">Company: {bay.company}</p>}
-          </div>
+          <Bay
+            key={bay.bay_number}
+            bayNumber={bay.bay_number}
+            company={bay.company}
+            containerNumber={bay.container_number}
+            isFull={bay.is_full}
+            contents={bay.contents}
+          />
         ))}
       </div>
     </main>
