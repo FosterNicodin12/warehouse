@@ -11,7 +11,7 @@ function Navigate() {
 
     return (
         <nav id="main-nav">
-            <button onClick={toggleMenu}>...</button>
+            <button onClick={toggleMenu}>⧩</button>
             <ul className={menuOpen?"":"hide-small"}>
             <li>
                     <Link to="/">Home</Link>

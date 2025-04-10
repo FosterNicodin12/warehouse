@@ -9,6 +9,7 @@
 
 #main-nav ul {
   display:flex;
+  flex-direction: column;
 }
 
 #main-nav li {
@@ -45,5 +46,6 @@
 
   #main-nav .hide-small {
       display:flex;
+      flex-direction: row;
   }
 }

@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Bay from '../components/Bay'; // Import the Bay component
-import './css/CurrentInventory.css'; // Import your CSS file for the overall page
+import Bay from '../components/Bay';
+import Bays from '../components/Bays';
+import './css/CurrentInventory.css';
 
 function CurrentInventory() {
   const [inventoryData, setInventoryData] = useState([]);
@@ -12,9 +13,9 @@ function CurrentInventory() {
     const fetchInventory = async () => {
       try {
         const response = await axios.get(
-          'https://warehouse-server-6vh1.onrender.com/api/bays' // Replace with your Render server URL
+          'https://warehouse-server-6vh1.onrender.com/api/bays'
         );
-        setInventoryData(response.data[0]); // Assuming your server sends back an array containing one array of bays
+        setInventoryData(response.data[0]);
         setLoading(false);
       } catch (error) {
         setError(error);
@@ -28,6 +29,7 @@ function CurrentInventory() {
 
   return (
     <main>
+      <Bays/>
       <p className="boxaround">
         Below is a live and accurate description of what our warehouse is holding. The gray represents our bays, if full they will have the container number in it.
         The red represents the aisles and the blue represents our loading docks.

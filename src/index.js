@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Bay from './components/Bay';
+import Bays from './components/Bays';
 import './index.css';
 import Layout from './Layout';
 import About from './pages/About';
@@ -33,6 +35,8 @@ function App() {
           <Route path="localdray" element={<LocalDray />}/>
           <Route path="currentinventory" element={<CurrentInventory />}/>
           <Route path="blog" element={<Blog />} />
+          <Route path="bays" element={<Bays />} />
+          <Route path="bay" element={<Bay />} />
           <Route path="*" element={<Nopage/>} />
         </Route>
       </Routes>
