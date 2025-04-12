@@ -1,0 +1,94 @@
+/* Warehouse.css */
+
+/* Boxaround */
+.boxaround {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  /* Warehouse Grid */
+  .warehouse {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, auto);
+    justify-content: center;
+    column-gap: 5px;
+    row-gap: 70px;
+    padding: 5px;
+    background-color: #ddd;
+}
+  
+  /* Warehouse Sections */
+  .section {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* Warehouse Paragraphs */
+  .section p {
+    white-space: normal;
+    word-wrap: break-word;
+    margin-top: 2px;
+  }
+  
+  /* Rack Styles */
+  .rack {
+    background-color: darkgray;
+  }
+  
+  /* Aisle Styles */
+  .aisle {
+    background-color: red;
+    color: white;
+  }
+  
+  /* Dock Styles */
+  .dock {
+    background-color: blue;
+    color: white;
+  }
+  
+  /* Office Styles */
+  .office {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Open Area Styles */
+  .open {
+    background-color: gray;
+    color: white;
+  }
+  
+  /* Mobile View Adjustments */
+  @media (max-width: 899px) {
+    .warehouse {
+      grid-template-rows: repeat(6, 150px);
+    }
+  
+    .rack p {
+      display: inline;
+      margin-left: 5px;
+    }
+  }
+  
+  /* Computer View Adjustments */
+  @media screen and (min-width: 900px) {
+    .warehouse {
+      grid-template-rows: repeat(6, 150px);
+    }
+  }

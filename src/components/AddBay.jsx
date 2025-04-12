@@ -6,13 +6,13 @@ const AddBay = (props) => {
     const [result, setResult] = useState("");
 
     const addToServer = async (event) => {
-        event.preventDefault(); // Stops default form submission
+        event.preventDefault();
         setResult("Adding bay...");
 
         const formData = new FormData(event.target);
         console.log(...formData);
 
-        const response = await fetch("http://localhost:3001/api/bays", {
+        const response = await fetch("https://warehouse-server-6vh1.onrender.com/api/bays", {
             "method": "POST",
             "body": formData
         });
@@ -55,11 +55,6 @@ const AddBay = (props) => {
                                 <option value={false}>No</option>
                                 <option value={true}>Yes</option>
                             </select>
-                        </p>
-
-                        <p>
-                            <label htmlFor="contents">Contents:</label>
-                            <input type="text" id="contents" name="contents"></input>
                         </p>
 
                         <section className="columns">

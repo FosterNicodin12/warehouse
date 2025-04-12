@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import AddBay from "./AddBay";
 import Bay from "./Bay";
-import "./css/Bays.css";
+import './css/Bays.css';
 
 const Bays = () => {
     const [bays, setBays] = useState([]);
@@ -11,7 +11,7 @@ const Bays = () => {
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get("http://localhost:3001/api/bays");
+                const response = await axios.get("https://warehouse-server-6vh1.onrender.com/api/bays");
                 setBays(response.data);
             } catch (error) {
                 console.error("Error fetching bays:", error);
@@ -33,7 +33,21 @@ const Bays = () => {
     };
 
     return (
-        <>
+        <div className="warehouse"> {}
+            {bays.map((bay) => {
+            console.log("Bay Data:", bay);
+                return (
+                <Bay
+                    key={bay.bay_number}
+                    bayNumber={bay.bay_number}
+                    company={bay.company}
+                    containerNumber={bay.container_number}
+                    isFull={bay.is_full}
+                    contents={bay.contents}
+                />
+                );
+                })}
+
             <button id="add-bay" onClick={openAddDialog}>+</button>
 
             {showAddDialog ? (
@@ -42,21 +56,7 @@ const Bays = () => {
                     updateBays={updateBays}
                 />
             ) : ("")}
-
-            <div id="bays-container" className="columns">
-                {bays.map((bay) => (
-                    <Bay
-                        key={bay.bay_number}
-                        bay_number={bay.bay_number}
-                        company={bay.company}
-                        picture={bay.picture}
-                        container_number={bay.container_number}
-                        is_full={bay.is_full}
-                        contents={bay.contents}
-                    />
-                ))}
-            </div>
-        </>
+        </div>
     );
 };
 

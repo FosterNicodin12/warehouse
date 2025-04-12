@@ -11,40 +11,6 @@
     text-align: center;
   }
   
-  /* Warehouse Grid */
-  .warehouse {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 150px);
-    justify-content: center;
-    gap: 5px;
-    padding: 5px;
-    background-color: #ddd;
-  }
-  
-  /* Warehouse Sections */
-  .section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  /* Warehouse Paragraphs */
-  .section p {
-    white-space: normal;
-    word-wrap: break-word;
-    margin-top: 2px;
-  }
-  
   /* Rack Styles */
   .rack {
     background-color: darkgray;
