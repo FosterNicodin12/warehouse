@@ -54,7 +54,8 @@ const Bays = () => {
                 <AddBay
                     closeAddDialog={closeAddDialog}
                     updateBays={updateBays}
-                />
+                showAddDialog={showAddDialog} // Pass the state as a prop
+            />
             ) : ("")}
         </div>
     );
