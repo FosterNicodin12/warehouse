@@ -38,6 +38,7 @@
 #edit-dialog,
 #delete-dialog {
   display: block;
+  z-index: 1000;
 }
 
 #delete-content {

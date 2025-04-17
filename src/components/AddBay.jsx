@@ -9,21 +9,21 @@ const AddBay = (props) => {
     const addToServer = async (event) => {
         event.preventDefault();
         setResult("Adding bay...");
-
+    
         const formData = new FormData(event.target);
         formData.set("is_full", formData.get("is_full") === "true");
-
-        console.log(...formData);
-
+    
         try {
             const response = await fetch("https://warehouse-server-6vh1.onrender.com/api/bays", {
                 method: "POST",
                 body: formData,
             });
-
+    
             if (response.status === 200) {
                 setResult("Bay added successfully");
                 event.target.reset();
+                const newBay = await response.json();
+                props.updateBays(newBay);
                 props.closeAddDialog();
             } else {
                 setResult("Error adding bay");

@@ -1,44 +1,87 @@
-.rack { background-color: var(--main-rack-color); }
-.aisle { background-color: var(--main-aisle-color); }
-.dock { background-color: var(--main-dock);  color: white; }
-.office { background-color: var(--main-office-color); color: white; }
+.bay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 80px;
+    min-height: 100px;
+    position: relative;
+}
 
-@media screen and (min-width: 900px) {
-    .section p {
-        white-space: normal;
-        word-wrap: break-word;
+.bay h3 {
+    font-size: 1em;
+    margin-bottom: 1px;
+    color: #333;
+    width: 100%;
+}
+
+.bay p {
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: inherit;
+    margin-bottom: 1px;
+}
+
+/* Style for the button container */
+#change-buttons {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 20;
+    display: flex;
+    gap: 5px;
+}
+
+/* Style for the buttons themselves */
+#change-buttons button {
+    padding: 5px;
+    font-size: 0.7em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+#change-buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 899px) {
+    .bay p {
+        display: inline;
+        margin-left: 2px;
     }
 
-    .warehouse p {
-        margin-top: 2px;
+    .bay h3 {
+        font-size: 0.9em;
+    }
+
+    #change-buttons button {
+        padding: 3px;
+        font-size: 0.6em;
     }
 }
 
+/* Computer View Adjustments */
+@media screen and (min-width: 900px) {
+    .bay {
+        font-size: 0.9rem;
+    }
 
-@media (max-width: 899px) {
-    .warehouse {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(6, 150px);
-        justify-content: center;
-        gap: 5px;
+    .bay h3 {
+        font-size: 1.2em;
+    }
+
+    #change-buttons button {
         padding: 5px;
-        background-color: #ddd;
-    }
-    
-    .section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid black;
-        font-size: 10px;
-        font-weight: bold;
-        text-align: center;
-    }
-    
-    .rack p {
-        display: inline;
-        margin-left: 5px;
+        font-size: 0.7em;
     }
 }

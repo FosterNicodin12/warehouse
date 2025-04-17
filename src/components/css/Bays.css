@@ -2,96 +2,173 @@
 
 /* Boxaround */
 .boxaround {
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 20px;
-    background-color: white;
-    width: 80%;
-    margin: 20px auto;
-    text-align: center;
-  }
-  h3 {
-    font-size: 15px;
-    font-weight: bold;
-  }
-  /* Warehouse Grid */
-  .warehouse {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, auto);
-    justify-content: center;
-    column-gap: 5px;
-    row-gap: 70px;
-    padding: 5px;
-    background-color: #ddd;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: white;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
 }
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Warehouse Grid */
+.warehouse {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: start;
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 5px;
+  background-color: #ddd;
+}
+
+/* Warehouse Sections */
+.section {
+  height: auto;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
   
-  /* Warehouse Sections */
+}
+
+/* Warehouse Paragraphs */
+.section p {
+  white-space: normal;
+  word-wrap: break-word;
+  margin-top: 2px;
+  font-size: inherit;
+}
+
+/* Rack Styles */
+.rack {
+  background-color: darkgray;
+}
+
+/* Aisle Styles */
+.aisle {
+  background-color: red;
+  color: white;
+}
+
+/* Dock Styles */
+.dock {
+  background-color: blue;
+  color: white;
+}
+
+/* Office Styles */
+.office {
+  background-color: black;
+  color: white;
+}
+
+/* Open Area Styles */
+.open {
+  background-color: gray;
+  color: white;
+}
+.section p {
+  white-space: normal;
+  word-wrap: break-word;
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-size: inherit;
+}
+
+/* Style for the button container */
+#change-buttons {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 20;
+  display: flex; 
+  gap: 5px;
+}
+
+#change-buttons button {
+  padding: 5px;
+  font-size: 0.7em;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+#change-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 899px) {
+  .warehouse {
+    grid-template-columns: repeat(12, 1fr);
+
+  }
+
   .section {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid black;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+      font-size: 0.7rem; /* Adjust font size for smaller screens */
+      padding: 5px;
+      min-height: 80px;
+      padding-bottom: 30px; /* Add bottom padding for buttons */
   }
-  /* Warehouse Paragraphs */
+
   .section p {
-    white-space: normal;
-    word-wrap: break-word;
-    margin-top: 2px;
-  }
-  
-  /* Rack Styles */
-  .rack {
-    background-color: darkgray;
-  }
-  
-  /* Aisle Styles */
-  .aisle {
-    background-color: red;
-    color: white;
-  }
-  
-  /* Dock Styles */
-  .dock {
-    background-color: blue;
-    color: white;
-  }
-  
-  /* Office Styles */
-  .office {
-    background-color: black;
-    color: white;
-  }
-  
-  /* Open Area Styles */
-  .open {
-    background-color: gray;
-    color: white;
-  }
-  
-  /* Mobile View Adjustments */
-  @media (max-width: 899px) {
-    .warehouse {
-      grid-template-rows: repeat(6, 150px);
-    }
-  
-    .rack p {
       display: inline;
-      margin-left: 5px;
-    }
+      margin-left: 2px;
+      font-size: inherit; /* Inherit adjusted font size */
   }
-  
-  /* Computer View Adjustments */
-  @media screen and (min-width: 900px) {
-    .warehouse {
-      grid-template-rows: repeat(6, 150px);
-    }
+
+  h3 {
+      font-size: 12px;
   }
+
+  #change-buttons button {
+      padding: 3px;
+      font-size: 0.6em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .warehouse {
+      grid-template-columns: repeat(12, 1fr);
+
+      justify-content: start;
+      column-gap: 5px;
+      row-gap: 110px;
+  }
+
+  .section {
+      font-size: 0.9rem;
+      padding: 10px;
+      min-height: 100px;
+      padding-bottom: 30px;
+  }
+
+  .section p {
+      font-size: inherit;
+  }
+
+  h3 {
+      font-size: 15px;
+  }
+
+  #change-buttons button {
+      padding: 5px;
+      font-size: 0.7em;
+  }
+}

@@ -8,6 +8,27 @@ const Bays = () => {
     const [bays, setBays] = useState([]);
     const [showAddDialog, setShowAddDialog] = useState(false);
 
+    const openAddDialog = () => {
+        setShowAddDialog(true);
+    };
+
+    const closeAddDialog = () => {
+        console.log("I'm in the close method");
+        setShowAddDialog(false);
+    };
+
+    const handleBayEdited = (updatedBay) => {
+        setBays(prevBays =>
+            prevBays.map(b => (b._id === updatedBay._id ? updatedBay : b))
+        );
+    };
+
+    const handleBayDeleted = (deletedBayId) => {
+        setBays(prevBays => prevBays.filter(b => b._id !== deletedBayId));
+
+    };
+
+
     useEffect(() => {
         (async () => {
             try {
@@ -19,44 +40,31 @@ const Bays = () => {
         })();
     }, []);
 
-    const openAddDialog = () => {
-        setShowAddDialog(true);
-    };
-
-    const closeAddDialog = () => {
-        console.log("I'm in the close method");
-        setShowAddDialog(false);
-    };
-
     const updateBays = (newBay) => {
+        console.log("updateBays called with:", newBay);
         setBays((prevBays) => [...prevBays, newBay]);
     };
 
     return (
-        <div className="warehouse"> {}
-            {bays.map((bay) => {
-            console.log("Bay Data:", bay);
-                return (
+        <div className="warehouse">
+            {bays.map((bay) => (
                 <Bay
-                    key={bay.bay_number}
-                    bayNumber={bay.bay_number}
-                    company={bay.company}
-                    containerNumber={bay.container_number}
-                    isFull={bay.is_full}
-                    contents={bay.contents}
+                    key={bay._id}
+                    {...bay}
+                    onBayDeleted={handleBayDeleted}
+                    onBayEdited={handleBayEdited}
                 />
-                );
-                })}
+            ))}
 
             <button id="add-bay" onClick={openAddDialog}>+</button>
 
-            {showAddDialog ? (
+            {showAddDialog && (
                 <AddBay
                     closeAddDialog={closeAddDialog}
                     updateBays={updateBays}
-                showAddDialog={showAddDialog} // Pass the state as a prop
-            />
-            ) : ("")}
+                    showAddDialog={showAddDialog}
+                />
+            )}
         </div>
     );
 };
